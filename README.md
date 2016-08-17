@@ -6,7 +6,14 @@
 
 ## Description
 
-_Behavior:
+- | Behavior      | Input         | Output|
+  | ------------------------------------------------|:-------------:| -----:|
+  | User enters a single letter                     | right-aligned | $1600 |
+  | User enters a word beginning with consonants    | centered      |   $12 |
+  | zebra stripes | are neat      |    $1 |
+
+
+Behavior:
 User enters a non-letter character
 Input: 3 Output: 3
 

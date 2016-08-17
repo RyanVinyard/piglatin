@@ -6,44 +6,36 @@ $(document).ready(function() {
   var inputArray = userInput.split("");
   var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
-
+//This one catches single letters
   if (userInput.length === 1) {
      userInput = (userInput + "ay");
    };
 
-  // if (userInput[0] != vowels) {
-  //   alert("works");
-  //   var substring = userInput.substring(0, 1);
+//This one catches non single letter words starting with vowels
+   if (userInput.charAt(0) === "a" || "e" || "i" || "o" || "u" || "A" || "E" || "I" || "O" || "U") {
+     var result = userInput + "ay";
 
 
-  //   userInput = (userInput.slice(1) + substring + "ay");
-  // };
-
-  for (var i = 0; i < vowels.length; i++) {
-    for (var n = 0; n < userInput.length; n++) {
-
-
+//This one catches words starting with multiple consonants and then a vowel
+   } else {
+      for (var i = 0; i < vowels.length; i++) {
+      for (var n = 0; n < userInput.length; n++) {
       if (userInput[n] === vowels[i]) {
-        var slice = userInput.slice(0,n);
-        var input = userInput.slice(n,100000);
-        userInput = (input + slice + "ay");
-        console.log(slice);
-        console.log(input);
-    };
-  };
-};
-  // }
-  //
-  // for (i = 0; i = userInput.length - 1; i++) {
-  //   if (userInput[i] === )
-  // }
+      var slice = userInput.slice(0,n);
+      var input = userInput.slice(n,userInput.length);
+      // if (slice.charAt(1) === "q" && (input.charAt(0) === "u") {
+      //   var u = input.slice(1);
+      //   alert(input);
+      //
+      // }
+      var result = (input + slice + "ay");
+      }
+    }
+  }
+}
 
-
-
-  $("#result").text(userInput);
+//And this prints out the result
+  $("#result").text(result);
 
   });
 });
-
-
-//var inputArray = userInput.split("");

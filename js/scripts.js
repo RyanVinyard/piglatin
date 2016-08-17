@@ -8,6 +8,12 @@ $(document).ready(function() {
   if (userInput.length === 1) {
      userInput = (userInput + "ay");
    };
+
+  if (userInput[0] != vowels) {
+    var substring = userInput.substring(0, 1);
+
+    userInput = (userInput.slice(1) + substring + "ay");
+  };
   // }
   //
   // for (i = 0; i = userInput.length - 1; i++) {
